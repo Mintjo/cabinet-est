@@ -63,48 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Stats Counter Animation ---
-  const statsSection = document.getElementById("stats-section");
-  const statNumbers = document.querySelectorAll(".stat-number");
 
-  if (statsSection && statNumbers.length > 0 && "IntersectionObserver" in window) {
-    let animated = false;
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !animated) {
-          animated = true;
-          statNumbers.forEach((stat) => {
-            const target = parseInt(stat.getAttribute("data-target"), 10);
-            const duration = 2000; // 2 seconds
-            const startTime = performance.now();
-
-            const updateCount = (currentTime) => {
-              const elapsedTime = currentTime - startTime;
-              const progress = Math.min(elapsedTime / duration, 1);
-              
-              // Easing out quad
-              const easeProgress = progress * (2 - progress);
-              const currentValue = Math.floor(easeProgress * target);
-              
-              const suffix = stat.getAttribute("data-suffix") || "";
-              stat.textContent = currentValue + suffix;
-
-              if (progress < 1) {
-                requestAnimationFrame(updateCount);
-              } else {
-                stat.textContent = target + suffix;
-              }
-            };
-
-            requestAnimationFrame(updateCount);
-          });
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    statsObserver.observe(statsSection);
-  }
 
   // --- Accordion Logic ---
   const accordionTriggers = document.querySelectorAll(".accordion-trigger");
@@ -122,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const otherPanelId = otherTrigger.getAttribute("aria-controls");
           const otherPanel = document.getElementById(otherPanelId);
           if (otherPanel) {
-            otherPanel.setAttribute("hidden", "");
+            otherPanel.classList.remove("active");
           }
         }
       });
@@ -130,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Toggle current panel
       if (isExpanded) {
         trigger.setAttribute("aria-expanded", "false");
-        panel.setAttribute("hidden", "");
+        panel.classList.remove("active");
       } else {
         trigger.setAttribute("aria-expanded", "true");
-        panel.removeAttribute("hidden");
+        panel.classList.add("active");
       }
     });
   });
