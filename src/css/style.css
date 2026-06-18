@@ -83,6 +83,8 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 ul, ol {
@@ -220,6 +222,7 @@ ul, ol {
 .logo-est {
   height: 52px;
   width: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -274,7 +277,8 @@ ul, ol {
   position: relative;
   background-image: url('/images/hero-bg-est.png');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding: 100px 0;
   color: var(--color-white);
   min-height: 85vh;
@@ -478,7 +482,7 @@ ul, ol {
 .card-prestation-img-wrapper {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -486,6 +490,8 @@ ul, ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform var(--transition-normal);
 }
 
@@ -608,10 +614,14 @@ ul, ol {
   border: 1px solid var(--color-border);
 }
 
-.about-img-container img {
+.about-img-container img,
+.director-img {
   width: 100%;
-  height: 100%;
+  max-width: 400px;
+  height: 480px;
   object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
 }
 
 .about-info h3 {
@@ -774,10 +784,13 @@ ul, ol {
 }
 
 .footer-logo {
-  height: 52px;
+  height: 48px;
   width: auto;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 6px;
   align-self: flex-start;
-  filter: brightness(0) invert(1);
 }
 
 .footer-slogan {
@@ -1101,12 +1114,42 @@ ul, ol {
   flex-shrink: 0;
 }
 
-.accordion-img {
-  border-radius: var(--radius-card);
-  object-fit: cover;
-  aspect-ratio: 4/3;
+.accordion-content-img {
   width: 100%;
+  max-height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
   border: 1px solid var(--color-border);
+}
+
+.accordion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Images dans la section équipe ou valeurs */
+.team-section img,
+.values-section img,
+.values-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.team-section img.icon,
+.team-section img.logo,
+.values-section img.icon,
+.values-section img.logo,
+.values-grid img.icon,
+.values-grid img.logo {
+  object-fit: contain;
+}
+
+.team-section img.photo,
+.values-section img.photo,
+.values-grid img.photo {
+  object-fit: cover;
 }
 
 /* Forms */
