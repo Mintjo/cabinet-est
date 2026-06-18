@@ -1,0 +1,31 @@
+<header class="site-header" id="site-header">
+  <div class="container header-container">
+    <a href="/" class="site-brand" aria-label="Cabinet EST - Retour à l'accueil">
+      <img src="/images/logo-est-transparent.png" alt="Cabinet EST Logo" class="logo-est" loading="eager">
+    </a>
+
+    <button class="burger-menu" id="burger-menu" aria-label="Menu de navigation" aria-expanded="false" aria-controls="site-navigation">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+
+    <nav class="site-nav" id="site-navigation">
+      <ul class="nav-list">
+        <li>
+          <a href="/" class="nav-link" {% if page.url == "/" %}aria-current="page"{% endif %}>Accueil</a>
+        </li>
+        <li>
+          <a href="/apropos/" class="nav-link" {% if page.url == "/apropos/" %}aria-current="page"{% endif %}>À propos</a>
+        </li>
+        <li>
+          <a href="/services/" class="nav-link" {% if page.url == "/services/" %}aria-current="page"{% endif %}>Services</a>
+        </li>
+        <li>
+          <a href="/contact/" class="nav-link" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a>
+        </li>
+      </ul>
+      <a href="/rendez-vous/" class="btn btn-primary btn-cta-nav">Prendre RDV</a>
+    </nav>
+  </div>
+</header>
