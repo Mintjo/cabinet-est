@@ -275,168 +275,105 @@ ul, ol {
    ========================================================================== */
 .hero-section {
   position: relative;
-  background-color: var(--color-white);
-  padding: 80px 0;
-  min-height: 80vh;
+  background-image: url('/images/hero-bg-est.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: var(--color-white);
+  min-height: 85vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 5;
-}
-
-.hero-title {
-  font-family: var(--font-headings);
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.15;
-  margin-bottom: 24px;
-}
-
-.hero-title span {
-  color: var(--color-accent);
-}
-
-.hero-desc {
-  font-size: 1.125rem;
-  color: var(--color-text-muted);
-  line-height: 1.65;
-  margin-bottom: 35px;
-  max-width: 600px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.hero-trust-badges {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.trust-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.trust-badge-icon {
-  color: var(--color-success);
-}
-
-/* Right column - image frame & decor */
-.hero-right {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  width: 100%;
-}
-
-.hero-image-frame {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 3/2;
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 48, 112, 0.88) 0%, rgba(0, 65, 135, 0.80) 50%, rgba(10, 92, 48, 0.72) 100%);
   z-index: 1;
 }
 
-.hero-img-flat {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Floating badge */
-.floating-badge-hero {
-  position: absolute;
-  bottom: 20px;
-  left: -20px;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
-  padding: 10px 18px;
-  border-radius: var(--radius-card);
+.hero-container-new {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  z-index: 10;
-  animation: floatBadge 3s ease-in-out infinite;
+  justify-content: center;
+  width: 100%;
 }
 
-@keyframes floatBadge {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+.hero-content-new {
+  max-width: 750px;
+  text-align: left;
 }
 
-.floating-badge-hero .badge-number {
+.hero-title-new {
+  font-size: 3.5rem;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  font-weight: 700;
   font-family: var(--font-headings);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--color-success);
-  line-height: 1;
 }
 
-.floating-badge-hero .badge-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 4px;
+.hero-title-new span {
+  color: var(--color-accent);
 }
 
-/* Decorative geometric patterns background */
-.shape-decor-1 {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 90px;
-  height: 90px;
-  background-image: radial-gradient(var(--color-accent) 2px, transparent 2px);
-  background-size: 10px 10px;
-  z-index: -1;
-  opacity: 0.4;
+.hero-desc-new {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  max-width: 650px;
 }
 
-.shape-decor-2 {
-  position: absolute;
-  bottom: -25px;
-  left: -25px;
-  width: 120px;
-  height: 120px;
-  background-color: var(--color-bg-alt);
-  border-radius: 50%;
-  z-index: -2;
+.hero-actions-new {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Glassmorphism Mini-cards */
+.hero-glass-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-card);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.glass-card-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.glass-card-text {
+  font-family: var(--font-headings);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-white);
 }
 
 /* ==========================================================================
@@ -1469,47 +1406,16 @@ textarea.form-control {
 
   /* Hero Mobile */
   .hero-section {
-    padding: 60px 0;
+    padding: 80px 0;
     min-height: auto;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-title {
+  .hero-title-new {
     font-size: 2.25rem;
   }
 
-  .hero-desc {
+  .hero-desc-new {
     font-size: 1.05rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-trust-badges {
-    justify-content: center;
-  }
-
-  .hero-image-frame {
-    max-width: 420px;
-    aspect-ratio: 3/2;
-    margin: 0 auto;
-  }
-
-  .floating-badge-hero {
-    left: 16px;
-    bottom: -16px;
   }
 
   /* Stats Mobile */
@@ -1680,22 +1586,26 @@ textarea.form-control {
 
 /* Small Mobile (Max 480px) */
 @media (max-width: 480px) {
-  .hero-title {
+  .hero-title-new {
     font-size: 1.75rem;
   }
 
-  .hero-desc {
+  .hero-desc-new {
     font-size: 0.95rem;
   }
 
-  .hero-actions {
+  .hero-actions-new {
     flex-direction: column;
     align-items: stretch;
-    width: 100%;
   }
 
-  .hero-actions .btn {
+  .hero-actions-new .btn {
     text-align: center;
+  }
+
+  .hero-glass-cards {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .stats-grid {
