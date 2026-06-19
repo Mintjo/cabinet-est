@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Page introuvable
+description: "La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil du Cabinet EST."
+permalink: /404.html
+---
+
+<section class="page-banner">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Page introuvable</li>
+      </ol>
+    </nav>
+    <h1 class="page-banner-title">Page introuvable (404)</h1>
+    <p class="page-banner-subtitle">La page que vous recherchez n'existe pas ou a été déplacée.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container text-center" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+    <p style="font-size: 1.125rem; color: var(--color-text-muted); margin-bottom: 30px;">
+      Il est possible que cette page ait été déplacée, supprimée ou que l'adresse ait été mal saisie.
+      Vous pouvez retourner à l'accueil ou nous contacter directement.
+    </p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+      <a href="/contact/" class="btn btn-outline">Nous contacter</a>
+    </div>
+  </div>
+</section>

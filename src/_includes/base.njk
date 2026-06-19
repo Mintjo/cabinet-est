@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{{ title }} | Cabinet Espace Santé des Travailleurs (EST)</title>
+  <meta name="description" content="{{ description or 'Cabinet EST — Spécialiste en santé et sécurité au travail à Cotonou, Bénin.' }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }} | Cabinet EST">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="/images/og-banner.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.espacesantetravailleurs.com{{ page.url }}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.espacesantetravailleurs.com{{ page.url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Google Fonts Preconnect & Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  {% if page.url == "/" %}
+  <link rel="preload" as="image" href="/images/hero-bg-est.png" fetchpriority="high">
+  {% endif %}
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  {% include "header.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <!-- JS Link -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
