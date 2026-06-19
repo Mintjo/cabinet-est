@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g01" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0078C8"/>
+      <stop offset="1" stop-color="#0050A0"/>
+    </linearGradient>
+  </defs>
+  <!-- fond -->
+  <ellipse cx="200" cy="250" rx="150" ry="16" fill="#0050A0" opacity="0.08"/>
+  <!-- grand bouclier -->
+  <path d="M200 50 L280 80 V150 C280 195 245 225 200 240 C155 225 120 195 120 150 V80 Z" fill="url(#g01)"/>
+  <path d="M200 50 L280 80 V150 C280 195 245 225 200 240 C155 225 120 195 120 150 V80 Z" fill="none" stroke="#003C8C" stroke-width="3"/>
+  <!-- croix médicale -->
+  <rect x="185" y="105" width="30" height="80" rx="6" fill="#fff"/>
+  <rect x="160" y="130" width="80" height="30" rx="6" fill="#fff"/>
+  <!-- check vert -->
+  <circle cx="255" cy="200" r="30" fill="#78B428"/>
+  <path d="M242 200 l9 9 l17 -18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- petits éléments déco -->
+  <circle cx="110" cy="70" r="8" fill="#F0A000" opacity="0.8"/>
+  <circle cx="300" cy="120" r="6" fill="#78B428" opacity="0.7"/>
+  <rect x="95" y="160" width="14" height="14" rx="3" fill="#0078C8" opacity="0.5" transform="rotate(20 102 167)"/>
+</svg>

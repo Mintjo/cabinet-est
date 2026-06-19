@@ -1,0 +1,141 @@
+/* ============================================================
+   SERVICE CARDS — avec photo, texte court, bouton
+   ============================================================ */
+.services-section {
+  padding: var(--section-py) 0;
+  background: var(--off-white);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+}
+.service-card:hover {
+  box-shadow: 0 16px 48px rgba(0,80,160,0.12);
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+.service-card.featured {
+  border-color: var(--blue-deep);
+}
+
+/* Photo */
+.sc-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.sc-img-placeholder {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  flex-shrink: 0;
+}
+
+/* Corps de la card */
+.sc-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.service-card.featured .sc-body {
+  background: var(--blue-deep);
+}
+
+/* Badge numéro */
+.sc-num {
+  position: absolute;
+  top: -14px; left: 20px;
+  background: var(--blue-main);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.service-card.featured .sc-num { background: var(--green); }
+
+/* Titre */
+.sc-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 14px 0 8px;
+  line-height: 1.3;
+}
+.service-card.featured .sc-title { color: var(--white); }
+
+/* Description courte */
+.sc-desc {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.service-card.featured .sc-desc { color: rgba(255,255,255,0.65); }
+
+/* Tags */
+.sc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+.sc-tag {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--off-white);
+  color: var(--text-mid);
+  border: 1px solid var(--border);
+}
+.service-card.featured .sc-tag {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+}
+
+/* Bouton Découvrir */
+.sc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue-main);
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: auto;
+  transition: gap 0.2s, color 0.2s;
+}
+.sc-btn:hover { gap: 10px; color: var(--blue-deep); }
+.service-card.featured .sc-btn {
+  color: var(--green);
+  border-top-color: rgba(255,255,255,0.12);
+}
+.service-card.featured .sc-btn:hover { color: #9FD44A; }
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+}

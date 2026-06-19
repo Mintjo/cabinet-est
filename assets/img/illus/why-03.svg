@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="w3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0078C8"/>
+      <stop offset="1" stop-color="#0050A0"/>
+    </linearGradient>
+  </defs>
+  <!-- axes -->
+  <path d="M45 30 V125 H160" fill="none" stroke="#0050A0" stroke-width="4" stroke-linecap="round"/>
+  <!-- barres -->
+  <rect x="60" y="95" width="16" height="30" rx="3" fill="url(#w3)"/>
+  <rect x="88" y="75" width="16" height="50" rx="3" fill="#0078C8"/>
+  <rect x="116" y="55" width="16" height="70" rx="3" fill="#78B428"/>
+  <rect x="144" y="40" width="16" height="85" rx="3" fill="#F0A000"/>
+  <!-- flèche montante -->
+  <path d="M55 105 l30 -22 l28 -18 l35 -28" fill="none" stroke="#003C8C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M138 37 l15 0 l0 15" fill="none" stroke="#003C8C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- déco -->
+  <circle cx="40" cy="55" r="5" fill="#78B428" opacity="0.6"/>
+  <circle cx="175" cy="100" r="5" fill="#F0A000" opacity="0.6"/>
+</svg>
