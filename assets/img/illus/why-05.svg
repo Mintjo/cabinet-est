@@ -1,19 +1,21 @@
-<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="w5" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0078C8"/>
-      <stop offset="1" stop-color="#0050A0"/>
-    </linearGradient>
-  </defs>
-  <!-- personne gauche -->
-  <circle cx="65" cy="60" r="18" fill="url(#w5)"/>
-  <path d="M37 125 c0 -18 12 -30 28 -30 s28 12 28 30 Z" fill="url(#w5)"/>
-  <!-- personne droite -->
-  <circle cx="135" cy="60" r="18" fill="#78B428"/>
-  <path d="M107 125 c0 -18 12 -30 28 -30 s28 12 28 30 Z" fill="#78B428"/>
-  <!-- coeur central -->
-  <path d="M100 78 c-7 -6 -13 -9 -13 -16 a6.5 6.5 0 0 1 13 -2 a6.5 6.5 0 0 1 13 2 c0 7 -6 10 -13 16 Z" fill="#F0A000"/>
-  <!-- déco -->
-  <circle cx="35" cy="45" r="5" fill="#F0A000" opacity="0.7"/>
-  <circle cx="165" cy="50" r="5" fill="#0078C8" opacity="0.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <rect width="200" height="160" fill="#EBF3FD" rx="12"/>
+  <!-- Cœur au-dessus de la personne centrale -->
+  <circle cx="95" cy="20" r="9" fill="#F0A000"/>
+  <circle cx="105" cy="20" r="9" fill="#F0A000"/>
+  <polygon points="86,22 114,22 100,36" fill="#F0A000"/>
+  <!-- Personne gauche (#003C8C) -->
+  <circle cx="60" cy="58" r="18" fill="#003C8C"/>
+  <rect x="40" y="78" width="40" height="36" rx="20" fill="#003C8C"/>
+  <!-- Personne centrale (#0050A0) — légèrement plus grande -->
+  <circle cx="100" cy="50" r="22" fill="#0050A0"/>
+  <rect x="76" y="74" width="48" height="40" rx="24" fill="#0050A0"/>
+  <!-- Personne droite (#78B428) -->
+  <circle cx="140" cy="58" r="18" fill="#78B428"/>
+  <rect x="120" y="78" width="40" height="36" rx="20" fill="#78B428"/>
+  <!-- Arc de cohésion -->
+  <path d="M60 122 Q100 138 140 122" fill="none" stroke="#78B428" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Accents décoratifs -->
+  <circle cx="38" cy="60" r="4" fill="#F0A000" opacity="0.6"/>
+  <circle cx="162" cy="60" r="4" fill="#F0A000" opacity="0.6"/>
 </svg>

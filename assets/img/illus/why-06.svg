@@ -1,19 +1,23 @@
-<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="w6" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0078C8"/>
-      <stop offset="1" stop-color="#0050A0"/>
-    </linearGradient>
-  </defs>
-  <!-- rubans -->
-  <path d="M82 90 l-12 45 l18 -10 l8 16 l12 -42 Z" fill="#0078C8"/>
-  <path d="M118 90 l12 45 l-18 -10 l-8 16 l-12 -42 Z" fill="#0050A0"/>
-  <!-- médaille -->
-  <circle cx="100" cy="62" r="38" fill="url(#w6)"/>
-  <circle cx="100" cy="62" r="28" fill="#F0A000"/>
-  <!-- étoile -->
-  <path d="M100 45 l5 11 l12 1 l-9 8 l3 12 l-11 -6 l-11 6 l3 -12 l-9 -8 l12 -1 Z" fill="#003C8C"/>
-  <!-- déco -->
-  <circle cx="40" cy="55" r="6" fill="#78B428" opacity="0.7"/>
-  <circle cx="160" cy="60" r="5" fill="#78B428" opacity="0.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <rect width="200" height="160" fill="#EBF3FD" rx="12"/>
+  <!-- Rubans -->
+  <rect x="88" y="10" width="13" height="65" rx="4" fill="#003C8C"/>
+  <rect x="103" y="10" width="13" height="65" rx="4" fill="#0050A0"/>
+  <!-- Médaille — disque or -->
+  <circle cx="100" cy="108" r="40" fill="#F0A000"/>
+  <!-- Anneau intérieur (ombre) -->
+  <circle cx="100" cy="108" r="33" fill="#E08800"/>
+  <!-- Étoile 5 branches (center 100,108, outer r=22, inner r=10) -->
+  <polygon points="100,86 106,100 121,101 110,111 113,126 100,118 87,126 90,111 79,101 94,100" fill="#003C8C"/>
+  <!-- Traits de reflet autour de la médaille -->
+  <line x1="100" y1="62" x2="100" y2="55" stroke="#F0A000" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="122" y1="70" x2="127" y2="63" stroke="#F0A000" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="78" y1="70" x2="73" y2="63" stroke="#F0A000" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="136" y1="90" x2="142" y2="86" stroke="#F0A000" stroke-width="2" stroke-linecap="round"/>
+  <line x1="64" y1="90" x2="58" y2="86" stroke="#F0A000" stroke-width="2" stroke-linecap="round"/>
+  <!-- Accents verts -->
+  <circle cx="62" cy="28" r="4" fill="#78B428" opacity="0.7"/>
+  <circle cx="138" cy="28" r="4" fill="#78B428" opacity="0.7"/>
+  <circle cx="156" cy="108" r="5" fill="#78B428" opacity="0.5"/>
+  <circle cx="44" cy="108" r="5" fill="#78B428" opacity="0.5"/>
 </svg>

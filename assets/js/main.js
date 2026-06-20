@@ -18,15 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- Active nav link ----
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
-
   // ---- FAQ accordion ----
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -54,11 +45,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-
-// ---- Reveal CSS (injecté dynamiquement) ----
-const style = document.createElement('style');
-style.textContent = `
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .reveal.visible { opacity: 1; transform: none; }
-`;
-document.head.appendChild(style);

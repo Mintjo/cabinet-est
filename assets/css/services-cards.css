@@ -17,6 +17,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
   transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
 }
 .service-card:hover {
@@ -26,6 +27,7 @@
 }
 .service-card.featured {
   border-color: var(--blue-deep);
+  color: var(--white);
 }
 
 /* Photo */

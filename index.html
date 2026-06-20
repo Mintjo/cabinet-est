@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil — Cabinet Espace Santé des Travailleurs</title>
   <meta name="description" content="Cabinet spécialisé en santé et sécurité au travail au Bénin. Prévention, visites médicales, conformité légale. Vèdoko, Cotonou.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cabinet Espace Santé des Travailleurs">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Accueil — Cabinet Espace Santé des Travailleurs">
+  <meta property="og:description" content="Cabinet spécialisé en santé et sécurité au travail au Bénin. Prévention, visites médicales, conformité légale. Vèdoko, Cotonou.">
+  <meta property="og:url" content="https://www.espacesantetravailleurs.com/index.html">
+  <meta property="og:image" content="https://www.espacesantetravailleurs.com/assets/img/logo-est.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192x192.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/services-cards.css">
 </head>
@@ -32,23 +46,43 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero full-width-style">
-  <div class="hero-container-centered">
-    <h1 class="hero-title centered">
-      La santé au travail,<br>
-      <em>notre domaine de compétence !</em>
-    </h1>
-    <p class="hero-sub centered">
-      Cabinet spécialisé en santé et sécurité au travail au Bénin. Nous accompagnons les structures de toutes tailles pour assurer la conformité et protéger les collaborateurs à travers six axes de service complémentaires.
-    </p>
-    <div class="hero-actions centered">
-      <a href="rdv.html" class="btn-primary">
-        📅 Prendre rendez-vous
-      </a>
-      <a href="services.html" class="btn-secondary">
-        Découvrir nos 6 services →
-      </a>
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- colonne gauche : texte -->
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        La santé au travail,<br>
+        <em>notre domaine de compétence !</em>
+      </h1>
+      <p class="hero-sub">
+        Cabinet spécialisé en santé et sécurité au travail au Bénin. Nous accompagnons les structures de toutes tailles pour assurer la conformité et protéger les collaborateurs à travers six axes de service complémentaires.
+      </p>
+      <div class="hero-actions">
+        <a href="rdv.html" class="btn-primary">
+          📅 Prendre rendez-vous
+        </a>
+        <a href="services.html" class="btn-secondary">
+          Découvrir nos 6 services →
+        </a>
+      </div>
     </div>
+
+    <!-- colonne droite : image nette -->
+    <div class="hero-visual">
+      <div class="hero-image-wrap">
+        <img src="assets/img/hero-medecin.jpg" class="hero-image"
+             alt="Médecin du travail Cabinet EST"
+             onload="this.nextElementSibling.style.display='none'"
+             onerror="this.style.display='none'">
+        <div class="hero-image-fallback">
+          <img src="assets/img/illus/illus-02.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- glass card pleine largeur -->
     <div class="hero-glass-card">
       <div class="glass-grid">
         <div class="glass-col">
@@ -65,6 +99,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -390,11 +425,12 @@
       <div class="footer-col">
         <h5>Nos Services</h5>
         <ul>
-          <li><a href="services.html">Prévention primaire</a></li>
-          <li><a href="services.html">Prévention secondaire</a></li>
-          <li><a href="services.html">Prévention tertiaire</a></li>
-          <li><a href="services.html">Recherche SST</a></li>
-          <li><a href="services.html">Support administratif</a></li>
+          <li><a href="services-detail.html#s1">Prévention primaire</a></li>
+          <li><a href="services-detail.html#s2">Prévention secondaire</a></li>
+          <li><a href="services-detail.html#s3">Prévention tertiaire</a></li>
+          <li><a href="services-detail.html#s4">Recherche SST</a></li>
+          <li><a href="services-detail.html#s5">Support administratif</a></li>
+          <li><a href="services-detail.html#s6">Audit SST</a></li>
         </ul>
       </div>
       <div class="footer-col">

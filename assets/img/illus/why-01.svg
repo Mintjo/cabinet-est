@@ -1,22 +1,17 @@
-<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="w1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0078C8"/>
-      <stop offset="1" stop-color="#0050A0"/>
-    </linearGradient>
-  </defs>
-  <!-- balance -->
-  <line x1="100" y1="30" x2="100" y2="130" stroke="#0050A0" stroke-width="5" stroke-linecap="round"/>
-  <line x1="75" y1="130" x2="125" y2="130" stroke="#0050A0" stroke-width="5" stroke-linecap="round"/>
-  <line x1="45" y1="45" x2="155" y2="45" stroke="#0050A0" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="100" cy="32" r="7" fill="#78B428"/>
-  <!-- plateau gauche -->
-  <path d="M30 45 l-12 28 a30 14 0 0 0 24 0 Z" fill="url(#w1)"/>
-  <line x1="30" y1="45" x2="30" y2="55" stroke="#0050A0" stroke-width="2"/>
-  <!-- plateau droit -->
-  <path d="M170 45 l-12 28 a30 14 0 0 0 24 0 Z" fill="url(#w1)"/>
-  <line x1="170" y1="45" x2="170" y2="55" stroke="#0050A0" stroke-width="2"/>
-  <!-- déco -->
-  <circle cx="40" cy="100" r="6" fill="#F0A000" opacity="0.7"/>
-  <circle cx="165" cy="110" r="5" fill="#78B428" opacity="0.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <rect width="200" height="160" fill="#EBF3FD" rx="12"/>
+  <!-- Document avec coin replié -->
+  <path d="M66 18 L112 18 L134 40 L134 120 Q134 128 126 128 L66 128 Q58 128 58 120 L58 26 Q58 18 66 18 Z" fill="#0050A0"/>
+  <polygon points="112,18 134,18 134,40" fill="#003C8C"/>
+  <!-- Lignes de texte simulées -->
+  <rect x="70" y="52" width="46" height="5" rx="2.5" fill="#C5DFFB"/>
+  <rect x="70" y="65" width="36" height="5" rx="2.5" fill="#C5DFFB" opacity="0.8"/>
+  <rect x="70" y="78" width="42" height="5" rx="2.5" fill="#C5DFFB" opacity="0.8"/>
+  <rect x="70" y="91" width="28" height="5" rx="2.5" fill="#C5DFFB" opacity="0.6"/>
+  <!-- Badge de validation -->
+  <circle cx="148" cy="120" r="26" fill="#78B428"/>
+  <polyline points="136,120 143,129 161,109" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Accent décoratif -->
+  <circle cx="42" cy="26" r="6" fill="#F0A000"/>
+  <circle cx="42" cy="42" r="4" fill="#78B428" opacity="0.5"/>
 </svg>
