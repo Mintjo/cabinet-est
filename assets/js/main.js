@@ -4,27 +4,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Navbar mobile overlay ----
+  // ---- Navbar mobile drawer ----
   const navToggle = document.getElementById('nav-toggle');
-  const navOverlay = document.getElementById('nav-overlay');
+  const navDrawer = document.getElementById('nav-drawer');
+  const navBackdrop = document.getElementById('nav-backdrop');
   const navClose = document.getElementById('nav-close');
 
   function openNav() {
-    navOverlay.classList.add('open');
-    navOverlay.setAttribute('aria-hidden', 'false');
+    navDrawer.classList.add('open');
+    navBackdrop.classList.add('open');
+    navDrawer.setAttribute('aria-hidden', 'false');
     navToggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
   function closeNav() {
-    navOverlay.classList.remove('open');
-    navOverlay.setAttribute('aria-hidden', 'true');
+    navDrawer.classList.remove('open');
+    navBackdrop.classList.remove('open');
+    navDrawer.setAttribute('aria-hidden', 'true');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
-  if (navToggle && navOverlay) {
+  if (navToggle && navDrawer) {
     navToggle.addEventListener('click', openNav);
     navClose.addEventListener('click', closeNav);
-    navOverlay.querySelectorAll('a').forEach(link => {
+    navBackdrop.addEventListener('click', closeNav);
+    navDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeNav);
     });
     document.addEventListener('keydown', e => {
