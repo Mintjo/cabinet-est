@@ -329,7 +329,7 @@ ul { list-style: none; }
 }
 .hero-image {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center top; display: block;
+  object-fit: cover; display: block;
 }
 .hero-image-fallback {
   position: absolute; inset: 0;
@@ -436,7 +436,7 @@ ul { list-style: none; }
 .about-photo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center top; z-index: 2;
+  object-fit: cover; z-index: 2;
 }
 .about-band-fallback {
   position: absolute; inset: 0;
