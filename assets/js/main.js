@@ -4,35 +4,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Navbar mobile drawer ----
+  // ---- Navbar mobile dropdown ----
   const navToggle = document.getElementById('nav-toggle');
-  const navDrawer = document.getElementById('nav-drawer');
-  const navBackdrop = document.getElementById('nav-backdrop');
-  const navClose = document.getElementById('nav-close');
+  const navDropdown = document.getElementById('nav-dropdown');
 
   function openNav() {
-    navDrawer.classList.add('open');
-    navBackdrop.classList.add('open');
-    navDrawer.setAttribute('aria-hidden', 'false');
+    navDropdown.classList.add('open');
+    navToggle.classList.add('open');
+    navDropdown.setAttribute('aria-hidden', 'false');
     navToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
   }
   function closeNav() {
-    navDrawer.classList.remove('open');
-    navBackdrop.classList.remove('open');
-    navDrawer.setAttribute('aria-hidden', 'true');
+    navDropdown.classList.remove('open');
+    navToggle.classList.remove('open');
+    navDropdown.setAttribute('aria-hidden', 'true');
     navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
   }
-  if (navToggle && navDrawer) {
-    navToggle.addEventListener('click', openNav);
-    navClose.addEventListener('click', closeNav);
-    navBackdrop.addEventListener('click', closeNav);
-    navDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeNav);
+  if (navToggle && navDropdown) {
+    navToggle.addEventListener('click', e => {
+      e.stopPropagation();
+      navDropdown.classList.contains('open') ? closeNav() : openNav();
     });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeNav();
+    navDropdown.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+    document.addEventListener('click', e => {
+      if (!navDropdown.contains(e.target) && !navToggle.contains(e.target)) closeNav();
     });
   }
 
