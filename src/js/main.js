@@ -96,4 +96,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // --- FAQ Accordion ---
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector(".faq-q");
+    if (trigger) {
+      trigger.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+        
+        // Close all other FAQ items
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("open");
+          }
+        });
+        
+        // Toggle current item
+        if (isOpen) {
+          item.classList.remove("open");
+        } else {
+          item.classList.add("open");
+        }
+      });
+    }
+  });
 });
