@@ -27,7 +27,7 @@
 
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
       <img src="assets/img/logo-est.png" alt="Cabinet Espace Santé des Travailleurs">
@@ -37,13 +37,36 @@
       <li><a href="apropos.html">À propos</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="rdv.html" class="nav-cta">Prendre RDV</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Menu">
+    <a href="rdv.html" class="nav-cta">Prendre RDV</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<!-- MENU MOBILE PLEIN ÉCRAN -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <div class="nav-overlay-top">
+    <a href="index.html">
+      <img src="assets/img/logo-est.png" alt="Cabinet Espace Santé des Travailleurs" class="nav-overlay-logo">
+    </a>
+    <button class="nav-close" id="nav-close" aria-label="Fermer le menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="nav-overlay-links">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav-overlay-bottom">
+    <a href="rdv.html" class="nav-overlay-cta">📅 Prendre RDV</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -86,16 +109,16 @@
     <div class="hero-glass-card">
       <div class="glass-grid">
         <div class="glass-col">
-          <h4>Dr IBRAHIMA Abdouhamid</h4>
-          <p>Médecin du Travail, inscrit à l'ONMB sous le N° 4276/ONMB/ATL/2024.</p>
+          <h4>Médecin du Travail Agréé</h4>
+          <p>Inscrit à l'Ordre National des Médecins du Bénin.</p>
         </div>
         <div class="glass-col border-left">
-          <h4>Enregistrement Officiel</h4>
-          <p>Immatriculé au RCCM sous le n° RB/PKO/25 B 1369.</p>
+          <h4>Santé &amp; Sécurité au Travail</h4>
+          <p>Prévention, évaluation des risques et accompagnement des entreprises.</p>
         </div>
         <div class="glass-col border-left">
           <h4>Couverture Nationale</h4>
-          <p>Cabinet basé à Cotonou, intervenant sur l'ensemble du territoire du Bénin.</p>
+          <p>Interventions à Cotonou et sur l'ensemble du territoire béninois.</p>
         </div>
       </div>
     </div>

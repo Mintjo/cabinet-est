@@ -4,17 +4,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Navbar toggle mobile ----
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+  // ---- Navbar mobile overlay ----
+  const navToggle = document.getElementById('nav-toggle');
+  const navOverlay = document.getElementById('nav-overlay');
+  const navClose = document.getElementById('nav-close');
+
+  function openNav() {
+    navOverlay.classList.add('open');
+    navOverlay.setAttribute('aria-hidden', 'false');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    navOverlay.classList.remove('open');
+    navOverlay.setAttribute('aria-hidden', 'true');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  if (navToggle && navOverlay) {
+    navToggle.addEventListener('click', openNav);
+    navClose.addEventListener('click', closeNav);
+    navOverlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
     });
-    document.addEventListener('click', (e) => {
-      if (!toggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('open');
-      }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeNav();
     });
   }
 
