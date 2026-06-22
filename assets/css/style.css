@@ -525,7 +525,7 @@ ul { list-style: none; }
    ============================================================ */
 .why-section {
   padding: var(--section-py) 0;
-  background: var(--blue-deep);
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue-main));
 }
 .why-grid {
   display: grid;
@@ -534,34 +534,73 @@ ul { list-style: none; }
   margin-top: 56px;
 }
 .why-card {
-  background: #FFFFFF;
-  border: 1px solid #DDE3EE;
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  box-shadow: 0 4px 16px rgba(0,60,140,0.08);
+  position: relative;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-left: 3px solid var(--green);
+  border-radius: 18px;
+  padding: 26px;
+  min-height: 200px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: box-shadow 0.25s, transform 0.25s;
 }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .why-card { background: rgba(255,255,255,0.16); }
+}
 .why-card:hover {
-  background: #FFFFFF;
-  box-shadow: 0 8px 28px rgba(0,60,140,0.14);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
   transform: translateY(-3px);
 }
+.why-halo {
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 110px; height: 110px;
+  background: rgba(120,180,40,0.30);
+  filter: blur(22px);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.why-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background: rgba(120,180,40,0.15);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
 .why-card h4 {
+  position: relative;
+  z-index: 2;
   font-family: var(--font-display);
-  font-size: 17px;
-  color: var(--text-dark);
+  font-size: 18px;
+  color: #FFFFFF;
   margin-bottom: 10px;
 }
 .why-card p {
-  font-size: 14px;
-  color: var(--text-mid);
-  line-height: 1.65;
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  max-width: 80%;
 }
-.why-accent {
-  width: 36px; height: 3px;
-  background: var(--green);
-  border-radius: 2px;
-  margin-bottom: 16px;
+.why-illus-mark {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 130px;
+  height: 130px;
+  opacity: 0.13;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ============================================================
