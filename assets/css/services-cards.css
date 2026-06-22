@@ -94,27 +94,6 @@
 }
 .service-card.featured .sc-desc { color: rgba(255,255,255,0.65); }
 
-/* Tags */
-.sc-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 16px;
-}
-.sc-tag {
-  font-size: 11px;
-  padding: 3px 9px;
-  border-radius: 20px;
-  background: var(--off-white);
-  color: var(--text-mid);
-  border: 1px solid var(--border);
-}
-.service-card.featured .sc-tag {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.7);
-}
-
 /* Bouton Découvrir */
 .sc-btn {
   display: inline-flex;
