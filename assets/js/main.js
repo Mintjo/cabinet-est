@@ -58,43 +58,36 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
 
-  // ---- Accordéon prestations services-detail.html ----
-  function initAccordionDetail() {
-    document.querySelectorAll('.service-block').forEach(block => {
-      const toggles = block.querySelectorAll('.sb-presta-toggle');
-      toggles.forEach(btn => {
+  // ---- Accordéon prestations Style 4 ----
+  function initAccordion(containerSelector) {
+    const containers = document.querySelectorAll(containerSelector);
+    containers.forEach(container => {
+      const btns = container.querySelectorAll('.acc-btn');
+      btns.forEach(btn => {
         btn.addEventListener('click', () => {
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-          toggles.forEach(other => {
-            other.setAttribute('aria-expanded', 'false');
-            other.nextElementSibling.hidden = true;
+          const item = btn.closest('.acc-item');
+          const body = item.querySelector('.acc-body');
+          const isOpen = item.classList.contains('open');
+          container.querySelectorAll('.acc-item.open').forEach(i => {
+            i.classList.remove('open');
+            const b = i.querySelector('.acc-body');
+            if (b) b.style.maxHeight = '0';
+            const bt = i.querySelector('.acc-btn');
+            if (bt) bt.setAttribute('aria-expanded', 'false');
           });
-          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-          btn.nextElementSibling.hidden = isOpen;
+          if (!isOpen) {
+            item.classList.add('open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
         });
       });
     });
   }
 
-  // ---- Accordéon prestations services.html ----
-  function initAccordionServices() {
-    document.querySelectorAll('.service-detail').forEach(section => {
-      const toggles = section.querySelectorAll('.svc-toggle');
-      toggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-          toggles.forEach(other => {
-            other.setAttribute('aria-expanded', 'false');
-            other.nextElementSibling.hidden = true;
-          });
-          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-          btn.nextElementSibling.hidden = isOpen;
-        });
-      });
-    });
+  if (document.querySelector('.acc-btn')) {
+    initAccordion('.sb-prestations');
+    initAccordion('.service-detail-list');
   }
-
-  if (document.querySelector('.sb-presta-toggle')) initAccordionDetail();
-  if (document.querySelector('.svc-toggle')) initAccordionServices();
 
 });
