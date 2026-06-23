@@ -58,4 +58,43 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
 
+  // ---- Accordéon prestations services-detail.html ----
+  function initAccordionDetail() {
+    document.querySelectorAll('.service-block').forEach(block => {
+      const toggles = block.querySelectorAll('.sb-presta-toggle');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          toggles.forEach(other => {
+            other.setAttribute('aria-expanded', 'false');
+            other.nextElementSibling.hidden = true;
+          });
+          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          btn.nextElementSibling.hidden = isOpen;
+        });
+      });
+    });
+  }
+
+  // ---- Accordéon prestations services.html ----
+  function initAccordionServices() {
+    document.querySelectorAll('.service-detail').forEach(section => {
+      const toggles = section.querySelectorAll('.svc-toggle');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          toggles.forEach(other => {
+            other.setAttribute('aria-expanded', 'false');
+            other.nextElementSibling.hidden = true;
+          });
+          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          btn.nextElementSibling.hidden = isOpen;
+        });
+      });
+    });
+  }
+
+  if (document.querySelector('.sb-presta-toggle')) initAccordionDetail();
+  if (document.querySelector('.svc-toggle')) initAccordionServices();
+
 });

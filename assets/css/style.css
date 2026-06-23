@@ -899,3 +899,94 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .whatsapp-float { width: 52px; height: 52px; bottom: 18px; right: 18px; }
 }
+
+/* ============================================================
+   ACCORDÉON SERVICES-DETAIL (.sb-presta-*)
+   ============================================================ */
+.sb-presta-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-mid);
+  text-align: left;
+}
+.sb-presta-toggle span { flex: 1; }
+.sb-presta-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--blue-main);
+  transition: transform 0.3s ease;
+}
+.sb-presta-toggle[aria-expanded="true"] .sb-presta-chevron {
+  transform: rotate(180deg);
+}
+.sb-presta-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.sb-presta-body[hidden] {
+  display: block !important;
+  max-height: 0;
+}
+.sb-presta-body:not([hidden]) { max-height: 600px; }
+.sb-presta-body p {
+  font-size: 14px;
+  color: var(--text-mid);
+  padding: 12px 0;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   ACCORDÉON SERVICES (.svc-*)
+   ============================================================ */
+.svc-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-dark);
+  text-align: left;
+}
+.svc-toggle span { flex: 1; }
+.svc-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--blue-main);
+  transition: transform 0.3s ease;
+}
+.svc-toggle[aria-expanded="true"] .svc-chevron {
+  transform: rotate(180deg);
+}
+.svc-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+  padding-left: 34px;
+}
+.svc-body[hidden] {
+  display: block !important;
+  max-height: 0;
+}
+.svc-body:not([hidden]) { max-height: 600px; }
+.svc-body p {
+  font-size: 14px;
+  color: var(--text-mid);
+  padding: 12px 0;
+  line-height: 1.7;
+}
+}
