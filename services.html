@@ -200,9 +200,51 @@
       border-radius: 20px;
     }
 
+    /* Avantages */
+    .sb-avantages {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+    }
+    .sb-avantages h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--blue-main);
+      margin-bottom: 16px;
+    }
+    .sb-avantages-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .sb-avantage {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13px;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+    .sb-avantage-icon {
+      width: 22px; height: 22px;
+      background: var(--blue-main);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
     @media (max-width: 900px) {
       .service-detail-grid { grid-template-columns: 1fr; gap: 40px; }
       .service-detail-grid.reverse { direction: ltr; }
+      .sb-avantages-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -532,20 +574,44 @@
         <span class="service-tag">04</span>
         <h2>Recherche en santé au travail</h2>
         <p>La recherche en santé au travail consiste à mener des études, enquêtes ou expérimentations afin de produire de nouvelles connaissances sur la santé et la sécurité au travail. Elle s'applique à tous les secteurs d'activité et permet d'analyser les situations de travail pour appuyer la prise de décision et améliorer la prévention des risques professionnels.</p>
-        <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Études et enquêtes de risques en milieu professionnel</span>
+        <div class="static-service-list">
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Études et enquêtes de risques en milieu professionnel</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Analyses pour orienter les stratégies de prévention</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Analyses pour orienter les stratégies de prévention</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Aide à la décision et développement de solutions adaptées</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Aide à la décision et développement de solutions adaptées</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Décisions basées sur des données fiables</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Identification des risques cachés ou émergents</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Stratégies de prévention sur mesure</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Valorisation de votre démarche SST auprès des partenaires</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Contribution à l'amélioration continue</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Anticipation des évolutions réglementaires</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -574,20 +640,44 @@
         <span class="service-tag">05</span>
         <h2>Activités administratives en santé au travail</h2>
         <p>Les activités administratives en santé au travail regroupent la collecte, l'analyse et la production de données, ainsi que l'élaboration de rapports (VM, VLT, IEC, rapports mensuels, trimestriels, semestriels et annuels) à partir de supports de suivi. Elles incluent également la délivrance de certificats médicaux attestant de l'état de santé des travailleurs après examen clinique.</p>
-        <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Production de données statistiques sur la santé de vos effectifs</span>
+        <div class="static-service-list">
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Production de données statistiques sur la santé de vos effectifs</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Élaboration des rapports d'activités SST</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Élaboration des rapports d'activités SST</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Gestion des documents médicaux et certificats réglementaires</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Gestion des documents médicaux et certificats réglementaires</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Traçabilité complète de toutes les actions SST</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Documents médicaux conformes aux exigences légales</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Rapports clairs pour piloter vos RH</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Réduction du risque juridique en cas de contrôle</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Gain de temps pour vos équipes administratives</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Données exploitables pour votre reporting RH</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
