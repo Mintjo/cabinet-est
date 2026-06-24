@@ -447,6 +447,9 @@ ul { list-style: none; }
 .about-band-fallback img { height: 120px; width: auto; object-fit: contain; }
 .mission-body p {
   margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 .mission-body p:first-of-type {
   margin-top: 0;
