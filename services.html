@@ -12,8 +12,9 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Services — Cabinet Espace Santé des Travailleurs">
   <meta property="og:description" content="Nos prestations en santé et sécurité au travail : prévention primaire, secondaire, tertiaire, recherche SST et support administratif au Bénin.">
-  <meta property="og:url" content="https://www.espacesantetravailleurs.com/services.html">
-  <meta property="og:image" content="https://www.espacesantetravailleurs.com/assets/img/logo-est.png">
+  <meta property="og:url" content="https://espacesantedestravailleurs.netlify.app/services.html">
+  <link rel="canonical" href="https://espacesantedestravailleurs.netlify.app/services.html">
+  <meta property="og:image" content="https://espacesantedestravailleurs.netlify.app/assets/img/logo-est.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
@@ -200,9 +201,51 @@
       border-radius: 20px;
     }
 
+    /* Avantages */
+    .sb-avantages {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+    }
+    .sb-avantages h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--blue-main);
+      margin-bottom: 16px;
+    }
+    .sb-avantages-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .sb-avantage {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13px;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+    .sb-avantage-icon {
+      width: 22px; height: 22px;
+      background: var(--blue-main);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
     @media (max-width: 900px) {
       .service-detail-grid { grid-template-columns: 1fr; gap: 40px; }
       .service-detail-grid.reverse { direction: ltr; }
+      .sb-avantages-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -263,23 +306,67 @@
         <h2>Prévention primaire</h2>
         <p>Actions visant à supprimer ou réduire l'exposition aux risques professionnels avant toute atteinte à la santé. Une approche proactive pour protéger vos équipes en amont.</p>
         <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visites des lieux de travail (VLT) pour identifier les risques dans votre environnement professionnel</span>
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite des lieux de travail (VLT)</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite des lieux de travail est une activité de prévention qui permet d'évaluer les conditions de travail, d'identifier les risques professionnels et de proposer des mesures correctives pour protéger la santé et la sécurité des travailleurs. Réalisée dans tous les secteurs d'activité, elle repose sur l'observation du travail réel et, si nécessaire, sur des mesures de l'environnement de travail (bruit, éclairage, poussières, chaleur, substances chimiques, vibrations, etc.). À l'issue de la visite, des recommandations sont formulées afin d'améliorer les conditions de travail et de prévenir les accidents et maladies professionnels.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Information, éducation et communication (IEC) en santé et sécurité au travail</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Information, Éducation et Communication (IEC)</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>L'IEC est une activité de prévention visant à renforcer les connaissances et les compétences des travailleurs en matière de santé et de sécurité au travail. Elle permet d'informer sur les risques professionnels, de sensibiliser aux mesures de prévention et d'encourager l'adoption de comportements sûrs au sein de l'entreprise. Cette prestation peut prendre la forme de séances de sensibilisation, de causeries éducatives, de campagnes d'information ou de diffusion de supports de communication adaptés aux besoins des travailleurs. Son objectif est de promouvoir une culture de prévention et de contribuer à la réduction des accidents du travail et des maladies professionnelles.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Actions de formation en santé et sécurité au travail pour vos équipes</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Actions de Formation en santé et sécurité au travail</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La formation en santé et sécurité au travail est une activité de renforcement des capacités visant à développer les connaissances et les compétences des employeurs, des travailleurs et des acteurs de prévention en matière de gestion des risques professionnels. Elle permet d'informer, de sensibiliser et de former les participants sur les bonnes pratiques de prévention afin de promouvoir un environnement de travail sain et sécurisé. À travers des sessions adaptées aux réalités de chaque secteur d'activité, cette prestation contribue à l'amélioration des comportements, à la réduction des accidents du travail et des maladies professionnelles, ainsi qu'au développement d'une véritable culture de prévention au sein des organisations.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Vaccination en milieu professionnel adaptée aux risques de votre secteur</span>
+          <div class="acc-item">
+            <div class="acc-num">04</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Vaccination en milieu de travail</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La vaccination en milieu de travail est une mesure de prévention visant à protéger les travailleurs contre les maladies auxquelles ils peuvent être exposés dans le cadre de leurs activités professionnelles. Réalisée selon les recommandations sanitaires en vigueur, elle contribue à réduire les risques de contamination, à préserver la santé des travailleurs et à prévenir la transmission de certaines maladies au sein de l'entreprise et dans leur entourage. Cette prestation s'intègre dans une démarche globale de prévention des risques biologiques et est mise en œuvre en fonction des risques spécifiques liés aux postes de travail.</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Réduction des accidents du travail dès la source</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Diminution des coûts liés aux arrêts maladie</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Conformité préventive aux normes SST béninoises</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Amélioration du climat social et de la confiance</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Protection renforcée des équipes sur le terrain</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Image d'entreprise responsable et engagée</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -309,56 +396,129 @@
         <h2>Prévention secondaire</h2>
         <p>Détection précoce des atteintes à la santé afin d'en limiter l'évolution et les conséquences. Une surveillance médicale régulière, structurée et conforme à la réglementation béninoise.</p>
         <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visite médicale d'embauche</span>
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite médicale d'embauche</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite médicale d'embauche est un examen réalisé avant ou lors de la prise de fonction d'un travailleur afin de vérifier son aptitude médicale au poste de travail envisagé. Elle permet d'identifier d'éventuelles contre-indications médicales, de prévenir les risques pour le travailleur et son entourage professionnel, et de proposer, si nécessaire, des aménagements ou adaptations du poste de travail.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visite médicale périodique</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite médicale périodique</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite médicale périodique est un examen de suivi réalisé à intervalles réguliers afin d'évaluer l'état de santé du travailleur et de s'assurer du maintien de son aptitude au poste occupé. Elle permet de détecter précocement d'éventuels effets du travail sur la santé et de proposer, si nécessaire, un aménagement ou un changement de poste.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visite de reprise après arrêt maladie</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite médicale de reprise du travail</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite médicale de reprise du travail est réalisée après une absence prolongée pour raison de santé afin d'évaluer l'aptitude du travailleur en toute sécurité. Elle permet de déterminer si le poste peut être repris sans risque ou si un aménagement des conditions de travail, une réadaptation professionnelle ou un changement de poste est nécessaire.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visite spéciale</span>
+          <div class="acc-item">
+            <div class="acc-num">04</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite spéciale</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite spéciale est un examen ciblé visant à suivre l'état de santé des travailleurs exposés à des risques particuliers. Elle permet de vérifier le maintien de l'aptitude au poste, de dépister précocement d'éventuelles atteintes à la santé et de proposer, si nécessaire, un aménagement ou un changement de poste.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visite de fin de contrat</span>
+          <div class="acc-item">
+            <div class="acc-num">05</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visite médicale de fin de contrat</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La visite médicale de fin de contrat est réalisée en fin d'activité afin d'évaluer l'état de santé du travailleur exposé à des risques professionnels. Elle permet d'assurer le suivi post-professionnel, notamment pour les risques à effets différés, et de faciliter une prise en charge médicale adaptée si nécessaire.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Visites d'aptitude (permis de conduire, Hajj, etc.)</span>
+          <div class="acc-item">
+            <div class="acc-num">06</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Visites d'aptitude (permis de conduire, Hadj, etc.)</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>Les visites médicales d'aptitude visent à évaluer l'état de santé des candidats avant certaines activités ou déplacements nécessitant des conditions physiques et mentales adaptées. Elles permettent, notamment pour le permis de conduire et le pèlerinage au Hadj, de vérifier l'aptitude du sujet, de dépister des pathologies incompatibles ou à risque, et de prévenir les complications ou incidents liés à l'état de santé.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Examens complémentaires en santé au travail</span>
+          <div class="acc-item open">
+            <div class="acc-num">07</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="true">
+                <span>Examens complémentaires en santé au travail</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" style="max-height:900px;">
+                <p>Lors des différentes visites médicales réglementaires, le médecin du travail prescrit s'il y a lieu, des examens complémentaires et requiert des avis spécialisés nécessaires :</p>
+                <ul>
+                  <li>à la détermination de l'aptitude médicale au poste de travail, notamment au dépistage des affections comportant une contre-indication à ce poste ;</li>
+                  <li>Les examens complémentaires se font à travers les services d'appui en stratégie fixe et en stratégie avancée.</li>
+                  <li>Ils peuvent se faire également à travers des conventionnements avec des structures spécialisées.</li>
+                </ul>
+                <p class="section-title">Intérêt de quelques examens réalisés</p>
+                <ul>
+                  <li><strong>Bilan sanguin</strong> (Glycémie, Créatinémie, NFS, Transaminases hépatiques etc) : le plus souvent demandés dans l'exposition aux produits chimiques, aux rayonnements, dans certaines situations de travail ou pour évaluer la présence de pathologies chroniques</li>
+                  <li><strong>Bilan ophtalmologique</strong> : surveillance ophtalmologique des travailleurs sur écran, conducteurs, exposition à des rayonnements, à des ambiances lumineuses défavorables</li>
+                  <li><strong>Bilan cardio vasculaire</strong> : surveillance du système cardio vasculaire (travaux pénibles, travail en hauteur, conducteur d'engin lourd, exposition au bruit etc)</li>
+                  <li><strong>Bilan ORL</strong> : surveillance audiométrique des travailleurs exposés au bruit, aux travaux en hauteur, les postes de conduite</li>
+                  <li><strong>Bilan neurologique</strong> : surveillance neurologique des travailleurs exposés aux travaux en hauteur, de précision, sur machines dangereuses etc</li>
+                  <li><strong>Exploration fonctionnelle respiratoire</strong> : surveillance des travailleurs exposés (expositions pulmonaires, exposition à des produits allergisants, fibrogène etc)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="acc-body" style="max-height:900px;">
-            <p>Lors des différentes visites médicales réglementaires, le médecin du travail prescrit s'il y a lieu, des examens complémentaires et requiert des avis spécialisés nécessaires :</p>
-            <ul>
-              <li>à la détermination de l'aptitude médicale au poste de travail, notamment au dépistage des affections comportant une contre-indication à ce poste ;</li>
-              <li>Les examens complémentaires se font à travers les services d'appui en stratégie fixe et en stratégie avancée.</li>
-              <li>Ils peuvent se faire également à travers des conventionnements avec des structures spécialisées.</li>
-            </ul>
-            <p class="section-title">Intérêt de quelques examens réalisés</p>
-            <ul>
-              <li><strong>Bilan sanguin</strong> (Glycémie, Créatinémie, NFS, Transaminases hépatiques etc) : le plus souvent demandés dans l'exposition aux produits chimiques, aux rayonnements, dans certaines situations de travail ou pour évaluer la présence de pathologies chroniques</li>
-              <li><strong>Bilan ophtalmologique</strong> : surveillance ophtalmologique des travailleurs sur écran, conducteurs, exposition à des rayonnements, à des ambiances lumineuses défavorables</li>
-              <li><strong>Bilan cardio vasculaire</strong> : surveillance du système cardio vasculaire (travaux pénibles, travail en hauteur, conducteur d'engin lourd, exposition au bruit etc)</li>
-              <li><strong>Bilan ORL</strong> : surveillance audiométrique des travailleurs exposés au bruit, aux travaux en hauteur, les postes de conduite</li>
-              <li><strong>Bilan neurologique</strong> : surveillance neurologique des travailleurs exposés aux travaux en hauteur, de précision, sur machines dangereuses etc</li>
-              <li><strong>Exploration fonctionnelle respiratoire</strong> : surveillance des travailleurs exposés (expositions pulmonaires, exposition à des produits allergisants, fibrogène etc)</li>
-            </ul>
-          </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Dépistage précoce des pathologies professionnelles et non professionnelles</span>
+          <div class="acc-item">
+            <div class="acc-num">08</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Dépistage des pathologies professionnelles et non professionnelles</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>Le dépistage consiste à rechercher de façon précoce les maladies liées ou non au travail chez les travailleurs. Il permet d'identifier rapidement des affections, de les prendre en charge précocement et de prévenir les complications ainsi que l'aggravation de l'état de santé.</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Conformité légale en matière de surveillance médicale</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Détection précoce des maladies professionnelles</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Réduction des complications et arrêts prolongés</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Traçabilité complète des visites médicales</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Sécurité juridique pour l'employeur</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Suivi individualisé de chaque travailleur</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -388,19 +548,55 @@
         <h2>Prévention tertiaire</h2>
         <p>Intervention après survenue d'une pathologie pour limiter complications, séquelles et récidives. Accompagnement du travailleur vers le maintien ou le retour à l'emploi.</p>
         <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Consultations en santé au travail pour les travailleurs atteints</span>
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Consultations en santé au travail</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La consultation en santé au travail est un examen clinique réalisé par un médecin du travail. Elle permet d'évaluer l'état de santé du travailleur, de réaliser des actes de prévention et d'investigation, et de proposer des mesures adaptées pour préserver la santé et la sécurité au travail.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Prise en charge des risques professionnels et de leurs conséquences</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Prise en charge des risques professionnels et de leurs conséquences</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>La prise en charge des risques professionnels consiste à identifier, évaluer et gérer les risques liés au travail afin de protéger la santé des travailleurs. Elle inclut la prévention des accidents et maladies professionnelles, ainsi que la prise en charge des conséquences médicales et professionnelles, notamment par le suivi, le traitement et l'adaptation du poste de travail si nécessaire.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Accompagnement du maintien et du retour à l'emploi</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <button class="acc-btn" aria-expanded="false">
+                <span>Accompagnement du maintien et du retour à l'emploi</span>
+                <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="acc-body" hidden>
+                <p>L'accompagnement du maintien et du retour à l'emploi consiste à soutenir le travailleur dont l'état de santé est altéré afin de préserver ou faciliter sa reprise d'activité professionnelle. Il vise à adapter le poste de travail, proposer des aménagements ou une réorientation si nécessaire, et favoriser une réinsertion durable et sécurisée dans l'emploi.</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Réduction des séquelles et complications durables</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Accompagnement vers le retour à l'emploi</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Gestion humaine et médicale des cas difficiles</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Limitation des coûts liés aux invalidités</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Maintien de la cohésion au sein des équipes</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Conformité aux obligations de maintien en emploi</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -428,21 +624,45 @@
       <div class="service-detail-content">
         <span class="service-tag">04</span>
         <h2>Recherche en santé au travail</h2>
-        <p>Études, enquêtes et analyses en milieu professionnel pour renforcer la compréhension des risques et orienter les stratégies de prévention. Contribution à l'aide à la décision.</p>
-        <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Études et enquêtes de risques en milieu professionnel</span>
+        <p>La recherche en santé au travail consiste à mener des études, enquêtes ou expérimentations afin de produire de nouvelles connaissances sur la santé et la sécurité au travail. Elle s'applique à tous les secteurs d'activité et permet d'analyser les situations de travail pour appuyer la prise de décision et améliorer la prévention des risques professionnels.</p>
+        <div class="static-service-list">
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Études et enquêtes de risques en milieu professionnel</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Analyses pour orienter les stratégies de prévention</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Analyses pour orienter les stratégies de prévention</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Aide à la décision et développement de solutions adaptées</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Aide à la décision et développement de solutions adaptées</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Décisions basées sur des données fiables</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Identification des risques cachés ou émergents</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Stratégies de prévention sur mesure</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Valorisation de votre démarche SST auprès des partenaires</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Contribution à l'amélioration continue</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Anticipation des évolutions réglementaires</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -469,22 +689,46 @@
     <div class="service-detail-grid reverse">
       <div class="service-detail-content">
         <span class="service-tag">05</span>
-        <h2>Support administratif</h2>
-        <p>Traçabilité, conformité et bonne organisation des actions de santé et sécurité au travail. Une gestion documentaire rigoureuse pour sécuriser votre entreprise.</p>
-        <div class="service-detail-list">
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Production de données statistiques sur la santé de vos effectifs</span>
+        <h2>Activités administratives en santé au travail</h2>
+        <p>Les activités administratives en santé au travail regroupent la collecte, l'analyse et la production de données, ainsi que l'élaboration de rapports (VM, VLT, IEC, rapports mensuels, trimestriels, semestriels et annuels) à partir de supports de suivi. Elles incluent également la délivrance de certificats médicaux attestant de l'état de santé des travailleurs après examen clinique.</p>
+        <div class="static-service-list">
+          <div class="acc-item">
+            <div class="acc-num">01</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Production de données statistiques sur la santé de vos effectifs</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Élaboration des rapports d'activités SST</span>
+          <div class="acc-item">
+            <div class="acc-num">02</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Élaboration des rapports d'activités SST</span>
+              </div>
+            </div>
           </div>
-          <div class="service-detail-item">
-            <div class="service-detail-item-dot">✓</div>
-            <span>Gestion des documents médicaux et certificats réglementaires</span>
+          <div class="acc-item">
+            <div class="acc-num">03</div>
+            <div class="acc-right">
+              <div class="acc-btn" style="cursor: default;">
+                <span>Gestion des documents médicaux et certificats réglementaires</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="sb-avantages">
+          <h4>Avantages pour votre entreprise</h4>
+          <div class="sb-avantages-grid">
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Traçabilité complète de toutes les actions SST</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Documents médicaux conformes aux exigences légales</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Rapports clairs pour piloter vos RH</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Réduction du risque juridique en cas de contrôle</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Gain de temps pour vos équipes administratives</div>
+            <div class="sb-avantage"><div class="sb-avantage-icon">✓</div> Données exploitables pour votre reporting RH</div>
+          </div>
+        </div>
+        <a href="rdv.html" class="btn-primary">📅 Demander ce service</a>
       </div>
       <div class="service-detail-visual">
         <div class="service-visual-box">
@@ -542,7 +786,7 @@
           <li><a href="services-detail.html#s2">Prévention secondaire</a></li>
           <li><a href="services-detail.html#s3">Prévention tertiaire</a></li>
           <li><a href="services-detail.html#s4">Recherche SST</a></li>
-          <li><a href="services-detail.html#s5">Support administratif</a></li>
+          <li><a href="services-detail.html#s5">Activités administratives en santé au travail</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -557,7 +801,7 @@
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <span>© 2026 Cabinet Espace Santé des Travailleurs — RCCM RB/PKO/25 B 1369</span>
-      <span>Conçu par <a href="https://mysticdigitalsolutions.com" target="_blank">Mystic Digital Solutions</a></span>
+      <span>Conçu par <a href="https://mysticdigitalsolutions.com" target="_blank" rel="noopener noreferrer">Mystic Digital Solutions</a></span>
     </div>
   </div>
 </footer>

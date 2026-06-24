@@ -58,4 +58,36 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
 
+  // ---- Accordéon prestations Style 4 ----
+  function initAccordion(containerSelector) {
+    const containers = document.querySelectorAll(containerSelector);
+    containers.forEach(container => {
+      const btns = container.querySelectorAll('.acc-btn');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.acc-item');
+          const body = item.querySelector('.acc-body');
+          const isOpen = item.classList.contains('open');
+          container.querySelectorAll('.acc-item.open').forEach(i => {
+            i.classList.remove('open');
+            const b = i.querySelector('.acc-body');
+            if (b) b.style.maxHeight = '0';
+            const bt = i.querySelector('.acc-btn');
+            if (bt) bt.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  }
+
+  if (document.querySelector('.acc-btn')) {
+    initAccordion('.sb-prestations');
+    initAccordion('.service-detail-list');
+  }
+
 });
