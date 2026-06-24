@@ -445,6 +445,13 @@ ul { list-style: none; }
   z-index: 1;
 }
 .about-band-fallback img { height: 120px; width: auto; object-fit: contain; }
+.mission-body p {
+  text-align: justify;
+  margin-top: 14px;
+}
+.mission-body p:first-of-type {
+  margin-top: 0;
+}
 .about-card-body { padding: 36px 32px; }
 .about-card-body::before {
   content: '';
