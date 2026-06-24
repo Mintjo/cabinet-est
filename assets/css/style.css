@@ -899,3 +899,41 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .whatsapp-float { width: 52px; height: 52px; bottom: 18px; right: 18px; }
 }
+
+.acc-body p {
+  font-size: 11.5px;
+  color: var(--text-mid);
+  line-height: 1.4;
+  margin-bottom: 6px;
+  padding-right: 20px;
+}
+.acc-body p:last-child {
+  padding-bottom: 14px;
+}
+.acc-body ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 4px 0 8px;
+}
+.acc-body ul li {
+  list-style: disc;
+  font-size: 11.5px;
+  color: var(--text-mid);
+  line-height: 1.4;
+  margin-bottom: 4px;
+  padding-right: 20px;
+}
+.acc-body strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+.acc-body .section-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin: 10px 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-right: 20px;
+  display: block;
+}
