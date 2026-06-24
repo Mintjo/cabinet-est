@@ -447,6 +447,9 @@ ul { list-style: none; }
 .about-band-fallback img { height: 120px; width: auto; object-fit: contain; }
 .mission-body p {
   margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 .mission-body p:first-of-type {
   margin-top: 0;
@@ -959,4 +962,41 @@ ul { list-style: none; }
   letter-spacing: 0.5px;
   padding-right: 20px;
   display: block;
+}
+
+/* Justification globale du contenu textuel */
+p,
+.hero-sub,
+.about-text,
+.mission-body p,
+.service-detail-text,
+.sb-avantage,
+.acc-body p,
+.acc-body li,
+.footer-brand p,
+.page-hero p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+}
+
+/* Exclure les éléments qui ne doivent PAS être justifiés */
+h1, h2, h3, h4, h5, h6,
+.btn, .btn-primary, .btn-outline,
+.nav-links a,
+.nav-cta,
+.service-tag,
+.hero-eyebrow,
+.eyebrow,
+.breadcrumb,
+label,
+.acc-btn span,
+.acc-num,
+.footer-col ul a,
+.topbar-item {
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
