@@ -924,8 +924,6 @@ ul { list-style: none; }
 .acc-item.open .acc-chev { transform: rotate(180deg); }
 .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 .acc-body[hidden] { display: block !important; max-height: 0; }
-@media (max-width: 480px) { .acc-num { min-width: 40px; font-size: 24px; } }
-
 .acc-body p {
   font-size: 11.5px;
   color: var(--text-mid);
@@ -963,7 +961,9 @@ ul { list-style: none; }
   padding-right: 20px;
   display: block;
 }
-
+/* ============================================================
+   JUSTIFICATION DU CONTENU TEXTUEL (lang fr)
+   ============================================================ */
 /* Justification globale du contenu textuel */
 p,
 .hero-sub,
@@ -982,7 +982,8 @@ p,
   word-break: break-word;
 }
 
-/* Exclure les éléments qui ne doivent PAS être justifiés */
+/* Exclure les éléments qui ne doivent PAS être justifiés
+   (inherit = jamais justifié, mais garde le centrage hérité) */
 h1, h2, h3, h4, h5, h6,
 .btn, .btn-primary, .btn-outline,
 .nav-links a,
@@ -996,7 +997,16 @@ label,
 .acc-num,
 .footer-col ul a,
 .topbar-item {
-  text-align: left;
+  text-align: inherit;
   hyphens: none;
   -webkit-hyphens: none;
 }
+
+/* Garde-fou : re-centrer les paragraphes des zones centrées */
+.section-head.centered .section-sub,
+.section-head.centered p,
+.cta-section p {
+  text-align: center;
+}
+
+@media (max-width: 480px) { .acc-num { min-width: 40px; font-size: 24px; } }
