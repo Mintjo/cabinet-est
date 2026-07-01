@@ -738,6 +738,42 @@ ul { list-style: none; }
 .btn-wa:hover { background: #1FAD55; transform: translateY(-2px); }
 
 /* ============================================================
+   ICÔNES SVG INLINE (sans dépendance externe)
+   ============================================================ */
+.icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
+.icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eef1f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* badges engagement : icône colorée selon la variante */
+.engagement-icon .icon { width: 22px; height: 22px; }
+.engagement-icon.blue .icon { stroke: #2563EB; }
+.engagement-icon.green .icon { stroke: #6DA544; }
+.engagement-icon.orange .icon { stroke: #E8A33D; }
+/* cartes contact */
+.contact-card-icon .icon { width: 24px; height: 24px; }
+/* canaux rdv : grande icône de carte, couleur marque */
+.rdv-channel-icon .icon { width: 44px; height: 44px; stroke: #2b3a67; }
+/* footer : version compacte 20px sans badge, alignée au texte */
+.footer-contact-item .icon { width: 20px; height: 20px; }
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
