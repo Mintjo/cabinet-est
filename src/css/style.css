@@ -507,29 +507,6 @@ ul, ol {
   background: var(--color-white);
 }
 
-.card-prestation .icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-prestation .icon-wrapper.success {
-  background: rgba(58, 138, 26, 0.08);
-  color: var(--color-success);
-}
-
-.card-prestation .icon-wrapper.secondary {
-  background: rgba(0, 65, 135, 0.06);
-  color: var(--color-primary);
-}
-
-.card-prestation .icon-wrapper svg {
-  display: block;
-}
-
 /* ==========================================================================
    BANDEAU PARTENAIRE / CTA DIAGONAL
    ========================================================================== */
@@ -1066,6 +1043,8 @@ ul, ol {
 }
 
 .accordion-icon {
+  display: inline-flex;
+  align-items: center;
   transition: transform var(--transition-normal);
   color: var(--color-primary);
 }
