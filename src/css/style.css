@@ -1629,3 +1629,17 @@ textarea.form-control {
     font-size: 1.75rem;
   }
 }
+
+/* ==========================================================================
+   Icônes SVG — système d'icônes "sobre clinique"
+   Voir la macro src/_includes/macros/icon.njk
+   ========================================================================== */
+.icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eef1f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
